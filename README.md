@@ -30,11 +30,19 @@
 - Weather page
 	- Display weather information
 - Location page
-	- Getting other user's location by map interface (for root user only)
+	- Get other user's location by map interface (for root user only)
 - Personal page
 	- Display personal information
 - Settings page
 	- Handle the preference settings
+	
+##### Website CMS
+- Display the actuators for control with notification and the weather information
+- Manage the actuators
+- Manage notification records
+- Get other user's location by map interface (for root user only)
+- Set function policy
+- Display personal information
 
 ## Getting Started
 - The project aims to build a digital home system with multiple platforms for focusing on the element of “safety” and targeting on the user of “family” for preventing the occurrence of accidents. Regarding the system, there are two platforms -Android application and Website. The system can automate the processes, make some records and perform all operations related to the users, which can provide the direct status of the working environment and the direct information of the users. In order to avoid the emergence of these home accidents, the digital home system will be applied. There are some sample features in the system such as avoiding children climb out of the house, preventing the children getting dangerous items (E.g. weapon, flammable liquids) and notifying the parents if a disaster is happened etc.
@@ -112,6 +120,10 @@
 | CMS Website     |
 | :-------------: |
 | ![Website](./demo/img_web.gif) |
+
+## Demonstration
+- For more information of the project demonstration, please click [here](https://youtu.be/rLazYdiA1WA) to watch the following video.
+[![Demonstration](https://img.youtube.com/vi/rLazYdiA1WA/maxresdefault.jpg)](https://youtu.be/rLazYdiA1WA)
 
 ## License
 - SmartController is released under the [Apache Version 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
