@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_divider_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    android:background="@color/white"
+    android:padding="10dp" >
+
+    <me.gujun.android.taggroup.TagGroup
+        android:id="@+id/tag_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        style="@style/TagGroup"
+        app:atg_backgroundColor="@color/primary_color"
+        app:atg_textColor="@color/cpb_white"
+        app:atg_borderColor="@color/primary_color"
+        app:atg_checkedBackgroundColor="@color/cpb_white"
+        app:atg_checkedTextColor="@color/primary_color"
+        app:atg_checkedBorderColor="@color/primary_color"
+        app:atg_pressedBackgroundColor="@color/cpb_white"
+        app:atg_textSize="16sp"
+        app:atg_horizontalPadding="120dp" />
+</RelativeLayout>

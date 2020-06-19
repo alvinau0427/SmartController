@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/ll_root_view">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp" >
+
+        <me.gujun.android.taggroup.TagGroup
+            android:id="@+id/tag_group"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/TagGroup"
+            app:atg_backgroundColor="@color/light_primary_color"
+            app:atg_textColor="@color/cpb_white"
+            app:atg_borderColor="@color/light_primary_color"
+            app:atg_checkedBackgroundColor="@color/light_primary_color"
+            app:atg_checkedTextColor="@color/cpb_white"
+            app:atg_checkedBorderColor="@color/light_primary_color"
+            app:atg_pressedBackgroundColor="@color/light_primary_color"
+            app:atg_textSize="16sp"
+            app:atg_horizontalPadding="20dp" />
+
+        <ImageView
+            android:id="@+id/image_indicator"
+            android:src="@drawable/ic_keyboard_arrow_down_black_18dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen>
+    <tabs>
+        <tab
+            id="@+id/tab_control"
+            title="Home"
+            activeColor="@color/current_tab"
+            icon="@drawable/ic_home" />
+
+        <tab
+            id="@+id/tab_heart"
+            title="Heart Rate"
+            activeColor="@color/current_tab"
+            icon="@drawable/ic_heart" />
+
+        <tab
+            id="@+id/tab_weather"
+            title="Weather"
+            activeColor="@color/current_tab"
+            icon="@drawable/ic_weather" />
+
+        <tab
+            id="@+id/tab_location"
+            title="Location"
+            activeColor="@color/current_tab"
+            icon="@drawable/ic_location" />
+
+        <tab
+            id="@+id/tab_personal"
+            title="Personal"
+            activeColor="@color/current_tab"
+            icon="@drawable/ic_personal" />
+    </tabs>
+</PreferenceScreen>

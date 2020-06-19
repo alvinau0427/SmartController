@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>PI Control</title>
+<script src="https://js.pusher.com/3.2/pusher.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+// Enable pusher logging - don't include this in production
+Pusher.logToConsole = true;
+
+var pusher = new Pusher('1bc88481522c1ebbf138', {
+	encrypted: true
+});
+
+
+var actuatorChannel = pusher.subscribe('actuator');
+actuatorChannel.bind('autoUpdateStatus', function(data) {
+	
+	$('div#data').html(JSON.stringify(data));
+	
+	var ip = data.ip;
+	
+	for(i in data.devices) {
+		var actuator = data.devices[i];
+		var str = "<b>ActuatorID: </b>" + actuator.actuatorID  + ", <b>ActuatorName: </b>" + actuator.actuatorName + 
+				"<br/><b>SensorName: </b>" + actuator.sensorName + ", <b>Status: </b>" + actuator.toStatus;
+				
+		var row = $('<tr>').html('<td>' + getCurrentDate() + '</td><td> ' + str + '</td>');
+		var td = $('<td>').html('loading...');
+		row.append(td);
+		$('div#record table tbody').prepend(row);
+		
+		$.ajax({
+			url: "http://" + ip + "/" + "api/updateStatus.php",
+			type: "GET",
+			data: "id=" + actuator.actuatorID + "&status=" + actuator.toStatus,
+			success : function(result) {
+				td.html('Success');
+			},
+			error: function() { td.html('Failed!'); }
+		});
+	}
+});
+
+actuatorChannel.bind('updateStatus', function(data) {
+	
+	$('div#data').html(JSON.stringify(data));
+	
+	var ip = data.ip;
+	
+	for(i in data.devices) {
+		var actuator = data.devices[i];
+		var str = "<b>ActuatorID: </b>" + actuator.actuatorID  + ", <b>Actuator Name: </b>" + actuator.actuatorName + ", <b>Status: </b>" + actuator.status;
+				
+		var row = $('<tr>').html('<td>' + getCurrentDate() + '</td><td> ' + str + '</td>');
+		var td = $('<td>').html('loading...');
+		row.append(td);
+		$('div#record table>tbody').prepend(row);
+		
+		$.ajax({
+			url: "http://" + ip + "/" + "api/updateStatus.php",
+			type: "GET",
+			data: "id=" + actuator.actuatorID + "&status=" + actuator.status,
+			success : function(result) {
+				td.html('Success');
+			},
+			error: function() { td.html('Failed!'); }
+		});
+	}
+});
+
+
+var heartRateChannel = pusher.subscribe('heartRate');
+heartRateChannel.bind('start', function(data) {
+	
+	$('div#data').html(JSON.stringify(data));
+	
+	var ip = data.ip;
+	var str = "Heart Rate Detector - Start";
+			
+	var row = $('<tr>').html('<td>' + getCurrentDate() + '</td><td> ' + str + '</td>');
+	var td = $('<td>').html('loading...');
+	row.append(td);
+	$('div#record table tbody').prepend(row);
+	
+	$.ajax({
+		url: "http://" + ip + "/" + "api/startHeartDevice.php",
+		type: "GET",
+		data: "userID=" + data.userID,
+		success : function(result) {
+			td.html('Success');
+		},
+		error: function() { td.html('Failed!'); }
+	});
+	
+});
+
+heartRateChannel.bind('update', function(data) {
+	
+	$('div#data').html(JSON.stringify(data));
+	
+	var str = "Heart Rate Detector - Heart Rate:" + data.heartRate;
+			
+	var row = $('<tr>').html('<td>' + getCurrentDate() + '</td><td> ' + str + '</td>');
+	var td = $('<td>').html('Received');
+	row.append(td);
+	$('div#record table tbody').prepend(row);
+	
+});
+
+function getCurrentDate() {
+	var d = new Date();
+	date = d.getDate() + "/" 
+			+ (d.getMonth()+1) + "/" 
+			+ d.getFullYear() + " " 
+			+ addZero(d.getHours()) + ":" 
+			+ addZero(d.getMinutes()) + ":"
+			+ addZero(d.getSeconds());
+	
+	return date;
+	
+	function addZero(i) {
+		if (i < 10) {
+			i = "0" + i;
+		}
+		return i;
+	}
+}
+</script>
+</head>
+
+<body>
+	<div id="data"></div>
+	
+	<div id="record">
+		<table border="1">
+			<thead>
+				<tr><th>Time</th><th>Detail</th><th>Action</th></tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+</body>
+</html>

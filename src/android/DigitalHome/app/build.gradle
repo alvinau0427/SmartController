@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.iot.digitalhome"
+        versionName "1.0"
+        versionCode 1
+        minSdkVersion 15
+        targetSdkVersion 25
+		multiDexEnabled true
+        maxSdkVersion 25
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        maven { url "https://jitpack.io" }
+		maven { url 'http://clojars.org/repo' }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+
+    // Support Libraries
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:support-v4:25.1.1'
+    compile 'com.android.support:design:25.1.1'
+    compile 'com.android.support:cardview-v7:25.1.1'
+    compile 'com.android.support:recyclerview-v7:25.1.1'
+    compile 'com.android.support:palette-v7:25.1.1'
+    compile 'com.android.support:animated-vector-drawable:25.1.1'
+
+    // Google Services
+    compile 'com.google.firebase:firebase-core:10.0.1'
+    compile 'com.google.firebase:firebase-messaging:10.0.1'
+    compile 'com.google.android.gms:play-services-auth:10.0.1'
+    compile 'com.google.android.gms:play-services-plus:10.0.1'
+    compile 'com.google.android.gms:play-services-ads:10.0.1'
+    compile 'com.google.android.gms:play-services-maps:10.0.1'
+    compile 'com.google.android.gms:play-services-places:10.0.1'
+
+    // Connection Library
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.pusher:pusher-java-client:1.4.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.android.support:multidex:1.0.1'
+
+    // Pusher
+    compile 'com.pusher:pusher-websocket-android:0.5.0'
+
+    // Youtube live steam
+    compile files('libs/library/YouTubeAndroidPlayerApi.jar')
+
+    // Facebook SDK
+    compile 'com.facebook.android:facebook-android-sdk:4.0.1'
+
+    // ButterKnife Tools
+    compile 'com.jakewharton:butterknife:8.4.0' // ButterKnife
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0' // ButterKnife
+
+    // GitHub Libraries
+    compile 'de.hdodenhof:circleimageview:2.1.0' // CircleImageView
+    compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3' // ProgressButton
+    compile 'jp.wasabeef:glide-transformations:1.3.1' // CardView
+    compile 'com.etsy.android.grid:library:1.0.5' // StaggeredGrid
+    compile 'com.roughike:bottom-bar:2.0.2' // BottomBar
+    compile 'com.flaviofaria:kenburnsview:1.0.7' // KenBurnsView
+    compile 'com.github.florent37:diagonallayout:1.0.2' // DiagonalLayout
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.1' // Chart
+    compile 'cat.ereza:customactivityoncrash:1.5.0' // CustomActivityCrash
+    compile 'com.github.bumptech.glide:glide:3.7.0' // Glide ImageLoader
+    compile 'com.github.jakob-grabner:Circle-Progress-View:v1.3' // CircleProcessView
+    compile 'com.github.amigold.fundapter:library:1.0' // FunDapter
+    compile 'net.xpece.android:support-preference:1.0.2' // Preference
+    compile 'com.github.javiersantos:MaterialStyledDialogs:1.5.5' // Dialogs
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar' // HeartRateRing
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar' // HeartRateRing
+    compile 'me.gujun.android.taggroup:library:1.4@aar' // TagGroup
+}
+
+apply plugin: 'com.google.gms.google-services'

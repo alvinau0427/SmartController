@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "163734116934",
+    "firebase_url": "https://digitalhome-6d720.firebaseio.com",
+    "project_id": "digitalhome-6d720",
+    "storage_bucket": "digitalhome-6d720.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163734116934:android:d5191cfd0ea1a1fb",
+        "android_client_info": {
+          "package_name": "com.iot.digitalhome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163734116934-6nuumipdjdmtphbq1komhguqtovbopoi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iot.digitalhome",
+            "certificate_hash": "5B66F62A7FA40430FB49A9E65409B058913B8AA6"
+          }
+        },
+        {
+          "client_id": "163734116934-lspet8q6683gston3bpj8as902p89gn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKjiWG35Fm97wFP_iAaM0enPZJ3d5vgrY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163734116934-lspet8q6683gston3bpj8as902p89gn8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

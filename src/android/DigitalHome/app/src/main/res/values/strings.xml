@@ -1,0 +1,143 @@
+<resources>
+    <!-- Default Strings -->
+    <string name="app_name">Smart Controller</string>
+    <string name="exit">Do you really want to exit?</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- LoginActivity      ||      layout / activity_login -->
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_keep_status">Preserve the login status</string>
+    <string name="login_login">Login</string>
+    <string name="login_register"><u>Register</u></string>
+    <string name="login_forgot"><u>Forgot your password?</u></string>
+    <string name="login_check">Please check your username and password</string>
+    <string name="login_checkInput">Please enter your username and password</string>
+    <string name="security_code">Security Code</string>
+
+    <!-- MainActivity      ||      layout / activity_main -->
+    <string name="main_welcome_message">Welcome, </string>
+    <string name="main_welcome_end">.</string>
+    <string name="main_date_message">Today is </string>
+    <string name="main_date_end">.</string>
+    <string name="main_time_message">Now is </string>
+    <string name="main_time_end">.</string>
+    <string name="main_temp_message">The temperature is </string>
+    <string name="main_temp_end">.</string>
+    <string name="main_hum_message">The humidity is </string>
+    <string name="main_hum_end">.</string>
+    <string name="main_speak_listen">Listening ...</string>
+    <string name="main_speak_nonSupport">Oops! Your device does not support Speech to Text.</string>
+    <string name="main_noPermission">You cannot do the action.</string>
+    <string name="main_update_success">Update Successfully.</string>
+    <string name="main_update_fail">Update Failed.</string>
+    <string name="main_update_unknown">Sorry, I cannot know what you want to do, Open or Close?</string>
+    <string name="main_update_notFound">Sorry, I cannot find the function.</string>
+    <string name="main_update_error">Sorry, there are more than one functions match your keywords.</string>
+    <string name="main_tag_control">Control</string>
+    <string name="main_tag_floor_plan">Floor Plan</string>
+    <string name="main_tag_weather">Weather</string>
+    <string name="main_tag_personal">Personal</string>
+    <string name="main_tag_setting">Settings</string>
+    <string name="main_just">Just</string>
+
+    <!--  layout / fragment_weather -->
+    <string name="fragmentHeartRate_noRecord">No record</string>
+    <string name="fragmentHeartRate_unit"> BPM</string>
+    <string name="fragmentHeartRate_loading">Loading...</string>
+    <string name="fragmentHeartRate_start"> Start </string>
+    <string name="fragmentHeartRate_measure">Measure</string>
+    <string name="fragmentHeartRate_history">History</string>
+
+    <!-- MainActivity      ||      layout / fragment_weather -->
+    <string name="fragmentWeather_updateDate">Update date: </string>
+    <string name="fragmentWeather_Average">Average (℃)</string>
+    <string name="fragmentWeather_Maximum">Maximum (℃)</string>
+    <string name="fragmentWeather_Minimum">Minimum (℃)</string>
+    <string name="fragmentWeather_Percentage">Percentage (%)</string>
+    <string name="fragmentWeather_Pascal">Pascal (hpa)</string>
+
+    <!-- MainActivity      ||      layout / fragment_setting -->
+    <string name="fragmentSetting_receiveNotification">Receive Notification</string>
+    <string name="fragmentSetting_receiveNotification_D">For controlling the actuators in Notification Mode</string>
+    <string name="fragmentSetting_receiveEmail">Receive Email</string>
+    <string name="fragmentSetting_receiveEmail_D">For receiving the emails when a fire broke out</string>
+    <string name="fragmentSetting_locationDisplay">Location Display</string>
+    <string name="fragmentSetting_locationDisplay_D">For parent to find out your location</string>
+    <string name="fragmentSetting_weatherNotification">Weather Notification</string>
+    <string name="fragmentSetting_weatherNotification_D">Weather reminder in Main Page</string>
+
+    <!-- Filter      ||      item_filter -->
+    <string name="itemFilter_title">Title</string>
+
+    <!-- Filter      ||      item_no_data_layout -->
+    <string name="itemNoData_message">No Data</string>
+
+    <!-- Filter      ||     view_filter_layout -->
+    <string name="viewFilter_sort_title">Sort</string>
+    <string name="viewFilter_filter_title">Filter</string>
+
+    <!-- TimeoutErrorActivity      ||      layout / activity_timeout_error -->
+    <string name="timeout_network">Server connect failed. Please try again!</string>
+    <string name="timeout_reconnect">Reconnect Server</string>
+
+    <!-- CustomEventListener      ||      layout / activity_custom_error -->
+    <string name="customError_error">Oops! An error occurred in those action. \nPlease restart the application.</string>
+    <string name="customError_title">Error details:</string>
+    <string name="customError_detail">Unknown Exception</string>
+    <string name="customError_restart">Restart Application</string>
+    <string name="customError_close">Close Application</string>
+
+    <!-- CustomEventListener      ||      default -->
+    <string name="customactivityoncrash_error_activity_error_occurred_explanation">Oops! An error occurred in those action. \nPlease restart the application.</string>
+    <string name="customactivityoncrash_error_activity_unknown_exception">No stacktrace available, please restart the application.</string>
+    <string name="customactivityoncrash_error_activity_restart_app">Restart Application</string>
+    <string name="customactivityoncrash_error_activity_close_app">Close Application</string>
+    <string name="customactivityoncrash_error_activity_error_details">Error Information</string>
+    <string name="customactivityoncrash_error_activity_error_details_title">Error Information</string>
+    <string name="customactivityoncrash_error_activity_error_details_close">OK</string>
+
+    <!-- SmoothListView      ||      default -->
+	<string name="smoothlistview_header_hint_normal">Pull down to refresh</string>
+    <string name="smoothlistview_header_hint_ready">Leave the screen for refresh</string>
+    <string name="smoothlistview_header_hint_loading">Loading ...</string>
+    <string name="smoothlistview_header_last_time">Last updated : </string>
+    <string name="smoothlistview_footer_hint_normal">More</string>
+    <string name="smoothlistview_footer_hint_ready">Leave the screen for refresh</string>
+
+    <!-- Navigation Drawer      ||      menu / activity_menu -->
+    <string name="nav_subtitle">Location</string>
+    <string name="nav_subtitle2">Log out</string>
+    <string name="nav_menu_option1">Home</string>
+
+    <!-- PersonalFragment -->
+    <string name="personalfragment_default_image">img_normal_user.jpg</string>
+    <string name="personalfragment_type">Type:</string>
+    <string name="personalfragment_email">Email:</string>
+
+    <!-- Pusher -->
+    <string name="pusher_key">1bc88481522c1ebbf138</string>
+    <string name="pusher_channel_heartRate">heartRate</string>
+    <string name="pusher_channel_actuator">actuator</string>
+    <string name="pusher_channel_updateStatus">updateStatus</string>
+    <string name="pusher_channel_update">update</string>
+
+    <!-- ModeUtil -->
+    <string name="modeUtil_Temperature">Temperature</string>
+    <string name="modeUtil_Temperature_D">current temperature</string>
+    <string name="modeUtil_Humidity">Humidity</string>
+    <string name="modeUtil_Humidity_D">humidity</string>
+    <string name="modeUtil_Min">Min</string>
+    <string name="modeUtil_Min_D">minimum temperature</string>
+    <string name="modeUtil_Max">Max</string>
+    <string name="modeUtil_Max_D">maximum temperature</string>
+    <string name="modeUtil_Pressure">Pressure</string>
+    <string name="modeUtil_Pressure_D">pressure</string>
+    <string name="modeUtil_Speed">Speed</string>
+    <string name="modeUtil_Speed_D">wind speed</string>
+    <string name="modeUtil_C">°C</string>
+    <string name="modeUtil_percentage">%</string>
+    <string name="modeUtil_Pa">Pa</string>
+    <string name="modeUtil_kmh">km/h</string>
+</resources>

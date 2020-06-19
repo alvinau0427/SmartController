@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default Colors -->
+    <color name="primary_color">#3F51B5</color>
+    <color name="dark_primary_color">#303F9F</color>
+    <color name="light_primary_color">#6371C2</color>
+    <color name="accent_color">#5B7EB0</color>
+    <color name="tab_color">#40C4FF</color>
+    <color name="window_background">#FFFFFF</color>
+    <color name="navigation_bar_background">#000000</color>
+    <color name="card_background">#EFEFEF</color>
+    <color name="text_primary_color">#FFFFFF</color>
+    <color name="edit_text_stroke">#BDBDBD</color>
+    <color name="result_text">#FFFFFFFF</color>
+    <color name="result_view">#B0000000</color>
+    <color name="full_text">#D8000C</color>
+    <color name="full_back">#FFBABA</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="theme_divider">#B6B6B6</color>
+    <color name="theme_window">#FFF5F5F5</color>
+
+    <!-- layout / activity_login -->
+    <color name="login_view_border">#FFFFFFFF</color>
+    <color name="login_icon_border">#FFFFFFFF</color>
+
+    <!-- layout / activity_registration -->
+    <color name="facebook_brand_color">#3B5998</color>
+    <color name="google_brand_color">#DC4E41</color>
+
+    <!-- layout / activity_main -->
+    <color name="main_status_background">#44000000</color>
+    <color name="main_background">#AAFFFFFF</color>
+    <color name="main_image_border">#FFFFFFFF</color>
+    <color name="module_permission_tag">#00DDAA</color>
+    <color name="main_control">#D1D1D1</color>
+
+    <!-- layout / activity_settings -->
+    <color name="setting_description">#40C4FF</color>
+    <color name="setting_title">#44000000</color>
+
+    <!-- layout / fragment_personal -->
+    <color name="personal_layout">#EEEEEE</color>
+
+    <!-- xml / activity_bottombar -->#2D48BD
+    <color name="current_tab">#2D48BD</color>
+    <color name="control_tab">#FF0000</color>
+    <color name="floor_tab">#00FF00</color>
+    <color name="weather_tab">#00FFFF</color>
+    <color name="personal_tab">#0000FF</color>
+    <color name="setting_tab">#FF00FF</color>
+
+    <!-- xml / idle_state_selector -->
+    <color name="idle_selector_pressed">#3A85F0</color>
+    <color name="idle_selector_focused">#3A85F0</color>
+    <color name="idle_selector_enabled">#80B0F5</color>
+
+	<!-- common -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#8f000000</color>
+
+    <!-- background -->
+    <color name="bg">#FFF5F5F5</color>
+    <color name="bg_pressed">#FFF2F2F2</color>
+
+    <!-- material design black font color -->
+    <color name="font_black_0">#212121</color>
+    <color name="font_black_1">#424242</color>
+    <color name="font_black_2">#616161</color>
+    <color name="font_black_3">#757575</color>
+    <color name="font_black_4">#9e9e9e</color>
+    <color name="font_black_5">#bdbdbd</color>
+    <color name="font_black_6">#e0e0e0</color>
+
+    <!-- divider -->
+    <color name="divider_1">#e2e2e2</color>
+    <color name="divider_2">#e6e6e6</color>
+
+    <color name="text_enabled">#FFFFFFFF</color>
+    <color name="text_disabled">#4DFFFFFF</color>
+</resources>
