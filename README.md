@@ -7,6 +7,9 @@
 [![Build Status](https://travis-ci.com/alvinau0427/SmartController.svg?branch=master)](https://travis-ci.org/alvinau0427/SmartController)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
+## Getting Started
+- The project aims to build a digital home system with multiple platforms for focusing on the element of “safety” and targeting on the user of “family” for preventing the occurrence of accidents. Regarding the system, there are two platforms -Android application and Website. The system can automate the processes, make some records and perform all operations related to the users, which can provide the direct status of the working environment and the direct information of the users. In order to avoid the emergence of these home accidents, the digital home system will be applied. There are some sample features in the system such as avoiding children climb out of the house, preventing the children getting dangerous items (E.g. weapon, flammable liquids) and notifying the parents if a disaster is happened etc.
+
 ## Features
 ##### Sensors
 - Partial area (Living room)
@@ -43,9 +46,6 @@
 - Get other user's location by map interface (for root user only)
 - Set function policy
 - Display personal information
-
-## Getting Started
-- The project aims to build a digital home system with multiple platforms for focusing on the element of “safety” and targeting on the user of “family” for preventing the occurrence of accidents. Regarding the system, there are two platforms -Android application and Website. The system can automate the processes, make some records and perform all operations related to the users, which can provide the direct status of the working environment and the direct information of the users. In order to avoid the emergence of these home accidents, the digital home system will be applied. There are some sample features in the system such as avoiding children climb out of the house, preventing the children getting dangerous items (E.g. weapon, flammable liquids) and notifying the parents if a disaster is happened etc.
 
 ## Installation
 
