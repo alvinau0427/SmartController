@@ -2,7 +2,7 @@
 
 > IVE 2015/16 Final Year Project
 
-> Android Application with CMS website (Content Management System): Digital Home System in IoT Environment with Sensor Control Model Building (Using Raspberry Pi 3 and different arduino sensors)
+> Android Application with CMS website (Content Management System): Digital Home System in IoT Environment with Sensor Control Model Building (Using Raspberry Pi 3 and different Arduino sensors)
 
 [![Build Status](https://travis-ci.com/alvinau0427/SmartController.svg?branch=master)](https://travis-ci.org/alvinau0427/SmartController)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
