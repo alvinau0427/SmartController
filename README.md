@@ -123,6 +123,7 @@
 
 ## Demonstration
 - For more information of the project demonstration, please click [here](https://youtu.be/rLazYdiA1WA) to watch the following video.
+
 [![Demonstration](https://img.youtube.com/vi/rLazYdiA1WA/hqdefault.jpg)](https://youtu.be/rLazYdiA1WA)
 
 ## License
