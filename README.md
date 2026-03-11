@@ -1,96 +1,60 @@
 # ![Logo](./demo/img_logo.png) SmartController
 
-> IVE 2015/16 Final Year Project
+> **IVE 2015/16 Final Year Project**
+> 
+> **IoT-Based Digital Home Ecosystem:** A multi-platform home automation and safety system integrating Android, Web CMS, Raspberry Pi 3, and Arduino sensor networks.
 
-> Android Application with CMS website (Content Management System): Digital Home System in IoT Environment with Sensor Control Model Building (Using Raspberry Pi 3 and different Arduino sensors)
+[![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)](#) &nbsp;
+[![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&logoColor=white)](#) &nbsp;
+[![PHP](https://img.shields.io/badge/php-%23777BB4.svg?&logo=php&logoColor=white)](#) &nbsp;
+[![JavaScript](https://img.shields.io/badge/Javacript-F9AB00?logo=javascript&logoColor=white)](#) &nbsp;
+[![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#) &nbsp;
+[![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)](#) &nbsp;
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE) &nbsp;
 
-[![Build Status](https://travis-ci.com/alvinau0427/SmartController.svg?branch=master)](https://travis-ci.org/alvinau0427/SmartController)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+## Project Overview
+**SmartController** is an integrated Digital Home System designed with a core focus on **family safety** and **accident prevention**. By leveraging IoT sensor models, the system automates environmental responses to protect vulnerable family members (children and elderly) from potential home hazards.
 
-## Getting Started
-- The project aims to build a digital home system with multiple platforms for focusing on the element of “safety” and targeting on the user of “family” for preventing the occurrence of accidents. Regarding the system, there are two platforms -Android application and Website. The system can automate the processes, make some records and perform all operations related to the users, which can provide the direct status of the working environment and the direct information of the users. In order to avoid the emergence of these home accidents, the digital home system will be applied. There are some sample features in the system such as avoiding children climb out of the house, preventing the children getting dangerous items (E.g. weapon, flammable liquids) and notifying the parents if a disaster is happened etc.
+### Core Mission
+* **Automation:** Real-time response to environmental changes (Rain, Gas, Temperature).
+* **Safety Monitoring:** Specialized sensors to prevent children from climbing windows or accessing dangerous items.
+* **Health Tracking:** Integrated biometric monitoring for family members.
+* **Remote Control:** Seamless management of home appliances via mobile and web interfaces.
 
-## Features
-##### Sensors
-- Partial area (Living room)
-	- Close thhe windows automatically when it rains
-	- Detect temperature and humidity of home location
-	- Check the heart rate
-	- Turn on / off the light automatically
-- Partial area (Kitchen)
-	- Turn off the electric range via mobile appllcation
-	- Turn on / off the drawer lock automatically
-- Partial area (Bathroom)
-	- Open the exhaust fan automatically if the carbon monoxide is detected
+## Key Features
+### IoT Sensor Network (Hardware Layer)
+* **Living Room Module:** * Smart Windows: Automatically closes upon rain detection.
+    * Climate Control: Real-time Temp/Humidity monitoring and automated lighting.
+    * Biometrics: Integrated heart rate sensor for health tracking.
+* **Kitchen Module:** * Appliance Safety: Remote cut-off for electric ranges.
+    * Smart Storage: Automated drawer locks for hazardous items (knives/chemicals).
+* **Bathroom Module:** * Air Quality: Automated exhaust fan activation upon Carbon Monoxide (CO) detection.
 
-##### Android Application
-- Home page
-	- Display the actuators for control with push notification and the weather information
-	- Voice control
-- Heart rate page
-	- Measuring heart rate
-	- Check history record
-- Weather page
-	- Display weather information
-- Location page
-	- Get other user's location by map interface (for root user only)
-- Personal page
-	- Display personal information
-- Settings page
-	- Handle the preference settings
-	
-##### Website CMS
-- Display the actuators for control with notification and the weather information
-- Manage the actuators
-- Manage notification records
-- Get other user's location by map interface (for root user only)
-- Set function policy
-- Display personal information
+### Android Application
+* **Dashboard:** Real-time actuator status, push notifications, and local weather.
+* **Voice Control:** Hands-free command interface for smart home operations.
+* **Geolocation:** Map-based tracking of family members (Admin/Root only).
+* **Health History:** Chronological logging of heart rate measurements.
 
-## Installation
+### Web CMS (Administrative End)
+* **Actuator Management:** Granular control over all hardware components.
+* **Policy Configuration:** Define automated rules and sensor trigger conditions.
+* **Audit Logs:** Complete history of notification records and system alerts.
 
-### Setup
-##### Server Setup
-- Get dynamic DNS
-	- P.S. If you have your server, you can ignore the step and use your server for other settings directly.
-	- Go to the link https://www.noip.com/ and create an account.
-	- In the `Dashboard` page, enter a hosyname you want in the tab `Quick Add` and click `Add Hostname`.
-	- Unfer the tab `Dynamic DNS - Device Configuration Assistant`, select the above host nameand follow your router settings to finish the steps.
-	- Go to the link https://www.noip.com/download?page=win and download the Dynamic DNS Update Client.
-	- After sign in with your account, choose your host created in step 2 and save it.
-	- Click `Refresh Now`.
-	- Open XAMPP and start Apach and MySQL.
+## Installation & Environment Setup
+### 1. Server Configuration (XAMPP & Dynamic DNS)
+1. **Dynamic DNS:** Register a hostname at [No-IP](https://www.noip.com/) and configure your router/Update Client to map your local IP.
+2. **Database:** Import `src/database/iot.sql` via phpMyAdmin (`http://localhost/phpmyadmin`).
+3. **PHP Pthreads Extension (Required for Multi-threading):**
+    * Determine if your PHP is **TS (Thread Safe)** via `phpinfo()`.
+    * Download matching version from [PECL releases](http://windows.php.net/downloads/pecl/releases/pthreads/2.0.9/).
+    * Move `pthreadVC2.dll` to `X:/xampp/php/` and `php_pthreads.dll` to `X:/xampp/php/ext/`.
+    * Add `extension=php_pthreads.dll` to your `php.ini` and restart Apache.
 
-- Import of database
-	- Open your server database in the link http://127.0.0.1:8080/phpmyadmin
-	- Import the sql file called iot.sql in `src/database/`
-
-- Installation of pthreads
-1. Judging PHP is ts or nts version
-	- Through phpinfo(); to see the one of the "Thread Safety" item. If "enabled", in general should be ts version. Otherwise, it it the nts version.
-
-2. Choosing a relevant version
-	- Download path: http://windows.php.net/downloads/pecl/releases/pthreads/2.0.9/
-
-3. Installing pthreads extension
-	- Unzip the file and get the pthreadVC2.dll and php_pthreads.dll. Put the former one to the `X:/xampp/php/`, and the later one to the `X:/xampp/php/ext/`
-	- Edit the php.ini, add `extension=php_pthreads.dll` under the tab `Dynamic Extension`.
-	- Restart the Apache server and turn on
-
-- Reference
-	- https://www.youtube.com/watch?v=kcBXy3arTko
-	- https://my.oschina.net/yanhx/blog/198114
-
-##### Android application setup
-- Change server path
-	- Open the project via Android Studio
-	- In the `MainActivity`, change the path or Dynamic DNS path.
-
-##### Website CMS setup
-- Change server path
-	- Open the file in `src/web/FYP/config.php`
-	- Change the value of `URLROOT` to your server path or Dynamic DNS path.
-	- After the above settings you have to run a `FYP/weather.bat` for each opening server for updating the weather records. And you can also write a logon script to perform the action.
+### 2. Client Setup
+* **Android:** Open the project in Android Studio. In `MainActivity`, update the server URL to your No-IP Dynamic DNS path.
+* **Web CMS:** Update `URLROOT` in `src/web/FYP/config.php`. 
+* **Note:** Ensure `FYP/weather.bat` is running to maintain updated weather data.
 
 ## Screenshots
 | Project Objective     |
